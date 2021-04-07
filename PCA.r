@@ -1,8 +1,5 @@
-#setting the appropriate directory
-setwd("D:/Documents/UNE/Trimester-4/STAT430 - Statistical
-Learning/Assignment-4")
 #reading the plants dataset
-plants_data <- read.csv("STAT330430_plants_update.csv")
+plants_data <- read_xlsx(file.choose())
 #get the row names of the dataset
 plants = row.names(plants_data)
 #get the variable names of the dataset
