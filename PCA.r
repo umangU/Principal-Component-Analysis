@@ -1,23 +1,23 @@
-#reading the plants dataset
+#Reading the plants dataset
 plants_data <- read_xlsx(file.choose())
-#get the row names of the dataset
+#Get the row names of the dataset
 plants = row.names(plants_data)
-#get the variable names of the dataset
+#Get the variable names of the dataset
 names(plants_data)
-#convert the site column from character to numeric
+#Convert the site column from character to numeric
 plants_data$Site=as.numeric(plants_data$Site)
-#remove the site column from the dataset while keeping only the quantitive
+#Remove the site column from the dataset while keeping only the quantitive
 variable
 plants <- plants_data[,-1]
-#calculate the means of the variable
+#Calculate the means of the variable
 means <- apply(plants, 2, mean)
-#format the value to remove the scientific notation
+#Format the value to remove the scientific notation
 format(means, scientific = F)
-#calculate the variance of the variable
+#Calculate the variance of the variable
 variance <- apply(plants, 2, var)
-#format the value to remove the scientific notation
+#Format the value to remove the scientific notation
 format(variance, scientific = F)
-#performing PCA on the plants dataset
+#Performing PCA on the plants dataset
 pr.out=prcomp(plants_data, scale=TRUE)
 #function to assign distinct color to each variable
 Cols=function (vec ){
