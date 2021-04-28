@@ -8,7 +8,7 @@ names(plants_data)
 plants_data$Site=as.numeric(plants_data$Site)
 #Remove the site column from the dataset while keeping only the quantitive variable
 plants <- plants_data[,-1]
-#alculate the means of the variable
+#Calculate the means of the variable
 means <- apply(plants, 2, mean)
 #Format the value to remove the scientific notation
 format(means, scientific = F)
