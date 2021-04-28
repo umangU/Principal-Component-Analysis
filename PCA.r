@@ -1,14 +1,14 @@
-# Reading the plants dataset
+#Reading the plants dataset
 plants_data <- read_xlsx(file.choose())
-# Get the row names of the dataset
+#Get the row names of the dataset
 plants = row.names(plants_data)
-# Get the variable names of the dataset
+#Get the variable names of the dataset
 names(plants_data)
-# Convert the site column from character to numeric
+#Convert the site column from character to numeric
 plants_data$Site=as.numeric(plants_data$Site)
-# Remove the site column from the dataset while keeping only the quantitive variable
+#Remove the site column from the dataset while keeping only the quantitive variable
 plants <- plants_data[,-1]
-# Calculate the means of the variable
+# alculate the means of the variable
 means <- apply(plants, 2, mean)
 # Format the value to remove the scientific notation
 format(means, scientific = F)
@@ -23,11 +23,11 @@ Cols=function (vec ){
  cols=rainbow (length (unique (vec )))
  return (cols[as.numeric (as.factor (vec))])
 }
-# Plotting the principal components
+#Plotting the principal components
 par(mfrow =c(1,2))
 plot(pr.out$x [,1:2], col=Cols(plants),pch =19, xlab ="Z1",ylab="Z2")
 plot(pr.out$x [,1:3], col=Cols(plants),pch =19, xlab ="Z1",ylab="Z3")
-# Getting the summary of the proportion of variance explained by principal component
+#Getting the summary of the proportion of variance explained by principal component
 summary(pr.out)
 # Plotting the variance explained by the first few principal components
 par(mfrow =c(1,1))
