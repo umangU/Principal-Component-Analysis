@@ -29,19 +29,19 @@ plot(pr.out$x [,1:2], col=Cols(plants),pch =19, xlab ="Z1",ylab="Z2")
 plot(pr.out$x [,1:3], col=Cols(plants),pch =19, xlab ="Z1",ylab="Z3")
 # Getting the summary of the proportion of variance explained by principal component
 summary(pr.out)
-#Plotting the variance explained by the first few principal components
+# Plotting the variance explained by the first few principal components
 par(mfrow =c(1,1))
 plot(pr.out)
-#Calculating the proportion of variance explained
+# Calculating the proportion of variance explained
 pve=100*pr.out$sdev^2/sum(pr.out$sdev ^2)
 
-#Plotting the PVE of each principal component
+# Plotting the PVE of each principal component
 par(mfrow =c(1,2))
 plot(pve, type ="o", ylab="PVE", xlab="Principal Component",col="blue")
 
-#Plotting the cummulative PVE of each principal component
+# Plotting the cummulative PVE of each principal component
 plot(cumsum(pve ), type="o", ylab ="Cumulative PVE", xlab="Principal Component", col="brown3")
 
-#Biplot
+# Biplot
 par(mfrow=c(1,1))
 biplot(pr.out, scale=TRUE)
