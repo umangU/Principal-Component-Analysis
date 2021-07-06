@@ -1,10 +1,10 @@
-# Reading the plants dataset
+#Reading the plants dataset
 plants_data <- read_xlsx(file.choose())
-# Get the row names of the dataset
+#Get the row names of the dataset
 plants = row.names(plants_data)
-# Get the variable names of the dataset
+#Get the variable names of the dataset
 names(plants_data)
-# Convert the site column from character to numeric
+#Convert the site column from character to numeric
 plants_data$Site=as.numeric(plants_data$Site)
 # Remove the site column from the dataset while keeping only the quantitive variable
 plants <- plants_data[,-1]
