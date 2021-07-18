@@ -1,6 +1,6 @@
-#Reading the plants dataset
+# Reading the plants dataset
 plants_data <- read_xlsx(file.choose())
-#Get the row names of the dataset
+# Get the row names of the dataset
 plants = row.names(plants_data)
 #Get the variable names of the dataset
 names(plants_data)
