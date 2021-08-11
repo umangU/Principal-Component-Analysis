@@ -42,6 +42,6 @@ plot(pve, type ="o", ylab="PVE", xlab="Principal Component",col="blue")
 # Plotting the cummulative PVE of each principal component
 plot(cumsum(pve ), type="o", ylab ="Cumulative PVE", xlab="Principal Component", col="brown3")
 
-# Biplot
+#Biplot
 par(mfrow=c(1,1))
 biplot(pr.out, scale=TRUE)
