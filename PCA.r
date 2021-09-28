@@ -16,7 +16,7 @@ format(means, scientific = F)
 variance <- apply(plants, 2, var)
 # Format the value to remove the scientific notation
 format(variance, scientific = F)
-# Performing PCA on the plants dataset
+#Performing PCA on the plants dataset
 pr.out=prcomp(plants_data, scale=TRUE)
 # Function to assign distinct color to each variable
 Cols=function (vec ){
