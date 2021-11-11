@@ -1,6 +1,6 @@
-#Reading the plants dataset
+# Reading the plants dataset
 plants_data <- read_xlsx(file.choose())
- #Get the row names of the dataset
+# Get the row names of the dataset
 plants = row.names(plants_data)
 names(plants_data)
 # Convert the site column from character to numeric
@@ -22,7 +22,7 @@ Cols=function (vec ){
  cols=rainbow (length (unique (vec )))
  return (cols[as.numeric (as.factor (vec))])
 }
-#Plotting the principal components
+# Plotting the principal components
 par(mfrow =c(1,2))
 plot(pr.out$x [,1:2], col=Cols(plants),pch =19, xlab ="Z1",ylab="Z2")
 plot(pr.out$x [,1:3], col=Cols(plants),pch =19, xlab ="Z1",ylab="Z3")
