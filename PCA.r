@@ -5,7 +5,7 @@ plants = row.names(plants_data)
 names(plants_data)
 # Convert the site column from character to numeric
 plants_data$Site=as.numeric(plants_data$Site)
-# Remove the site column from the dataset while keeping only the quantitive variable
+#Remove the site column from the dataset while keeping only the quantitive variable
 plants <- plants_data[,-1]
 # Calculate the means of the variable
 means <- apply(plants, 2, mean)
