@@ -38,7 +38,7 @@ pve=100*pr.out$sdev^2/sum(pr.out$sdev ^2)
 par(mfrow =c(1,2))
 plot(pve, type ="o", ylab="PVE", xlab="Principal Component",col="blue")
 
-# Plotting the cummulative PVE of each principal component
+#Plotting the cummulative PVE of each principal component
 plot(cumsum(pve ), type="o", ylab ="Cumulative PVE", xlab="Principal Component", col="brown3")
 
 # Biplot
