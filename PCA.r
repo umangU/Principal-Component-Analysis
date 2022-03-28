@@ -9,7 +9,7 @@ plants_data$Site=as.numeric(plants_data$Site)
 plants <- plants_data[,-1]
 # Calculate the means of the variable
 means <- apply(plants, 2, mean)
-# Format the value to remove the scientific notation
+#Format the value to remove the scientific notation
 format(means, scientific = F)
 # Calculate the variance of the variable
 variance <- apply(plants, 2, var)
